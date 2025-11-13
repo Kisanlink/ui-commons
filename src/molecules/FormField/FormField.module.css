@@ -1,0 +1,56 @@
+/* FormField Container */
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  width: 100%;
+}
+
+/* Label */
+.label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+}
+
+/* Required Indicator */
+.required {
+  color: var(--color-error-500);
+  margin-left: var(--spacing-1);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Control Wrapper */
+.control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Error state for control (propagates red border to children) */
+.controlError > * {
+  border-color: var(--color-error-500) !important;
+}
+
+.controlError > *:focus {
+  border-color: var(--color-error-600) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Error Message */
+.error {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-error-600);
+  line-height: var(--line-height-normal);
+}
+
+/* Helper Text */
+.helperText {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+}

@@ -1,0 +1,85 @@
+.popover {
+  position: absolute;
+  z-index: 9999;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-4);
+  max-width: 300px;
+  animation: popoverFadeIn 0.2s ease-out;
+}
+
+@keyframes popoverFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Placement-specific transforms */
+.placement-top {
+  transform-origin: bottom center;
+  transform: translateX(-50%);
+}
+
+.placement-bottom {
+  transform-origin: top center;
+  transform: translateX(-50%);
+}
+
+.placement-left {
+  transform-origin: right center;
+  transform: translateY(-50%);
+}
+
+.placement-right {
+  transform-origin: left center;
+  transform: translateY(-50%);
+}
+
+/* Arrow */
+.arrow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border-light);
+  transform: rotate(45deg);
+}
+
+.arrow-top {
+  bottom: -6px;
+  left: 50%;
+  margin-left: -6px;
+  border-top: none;
+  border-left: none;
+}
+
+.arrow-bottom {
+  top: -6px;
+  left: 50%;
+  margin-left: -6px;
+  border-bottom: none;
+  border-right: none;
+}
+
+.arrow-left {
+  right: -6px;
+  top: 50%;
+  margin-top: -6px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.arrow-right {
+  left: -6px;
+  top: 50%;
+  margin-top: -6px;
+  border-right: none;
+  border-top: none;
+}

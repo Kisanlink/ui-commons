@@ -1,0 +1,168 @@
+/* Radio Component Styles */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  user-select: none;
+}
+
+.label--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.radio {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-neutral-300);
+  border-radius: 50%;
+  background-color: var(--color-background);
+  cursor: pointer;
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    border-width 200ms ease,
+    box-shadow 200ms ease;
+  flex-shrink: 0;
+}
+
+.radio:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.radio:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* Checked state - inner circle effect with thick border */
+.radio:checked {
+  border-width: 6px;
+}
+
+/* Variant: Primary */
+.radio--primary:checked {
+  border-color: var(--color-primary-600);
+}
+
+.radio--primary:focus {
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+/* Variant: Secondary */
+.radio--secondary:checked {
+  border-color: var(--color-secondary-600);
+}
+
+.radio--secondary:focus {
+  box-shadow: 0 0 0 3px var(--color-secondary-100);
+}
+
+/* Variant: Success */
+.radio--success:checked {
+  border-color: var(--color-success-600);
+}
+
+.radio--success:focus {
+  box-shadow: 0 0 0 3px var(--color-success-100);
+}
+
+/* Variant: Error */
+.radio--error {
+  border-color: var(--color-error-500);
+}
+
+.radio--error:checked {
+  border-color: var(--color-error-600);
+}
+
+.radio--error:focus {
+  box-shadow: 0 0 0 3px var(--color-error-100);
+}
+
+/* Disabled state */
+.radio--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.labelText {
+  color: var(--color-text-primary);
+}
+
+.helperText {
+  margin-left: calc(20px + var(--spacing-2));
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.errorText {
+  margin-left: calc(20px + var(--spacing-2));
+  font-size: var(--font-size-xs);
+  color: var(--color-error-600);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Hover effects */
+.radio:not(:disabled):hover {
+  border-color: var(--color-neutral-400);
+}
+
+.radio--primary:not(:disabled):hover:checked {
+  border-color: var(--color-primary-700);
+}
+
+.radio--secondary:not(:disabled):hover:checked {
+  border-color: var(--color-secondary-700);
+}
+
+.radio--success:not(:disabled):hover:checked {
+  border-color: var(--color-success-700);
+}
+
+.radio--error:not(:disabled):hover:checked {
+  border-color: var(--color-error-700);
+}
+
+/* RadioGroup Styles */
+.groupWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.groupLabel {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.group--horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.groupError {
+  font-size: var(--font-size-xs);
+  color: var(--color-error-600);
+  line-height: var(--line-height-relaxed);
+}

@@ -1,0 +1,118 @@
+/* Input Wrapper */
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Base Input Styles */
+.input {
+  display: block;
+  width: 100%;
+  font-family: var(--font-family-sans);
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  transition: all 0.2s ease-in-out;
+}
+
+.input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+.input:disabled {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+/* Size Variants */
+.size-xs {
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-xs);
+}
+
+.size-sm {
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: var(--font-size-sm);
+}
+
+.size-md {
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-base);
+}
+
+.size-lg {
+  padding: var(--spacing-3) var(--spacing-4);
+  font-size: var(--font-size-lg);
+}
+
+.size-xl {
+  padding: var(--spacing-3) var(--spacing-5);
+  font-size: var(--font-size-xl);
+}
+
+/* Error State */
+.error {
+  border-color: var(--color-error-500);
+}
+
+.error:focus {
+  border-color: var(--color-error-600);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Icon Positioning */
+.with-left-icon {
+  padding-left: 2.5rem;
+}
+
+.with-right-icon {
+  padding-right: 2.5rem;
+}
+
+.left-icon {
+  position: absolute;
+  left: var(--spacing-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-tertiary);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-icon {
+  position: absolute;
+  right: var(--spacing-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-tertiary);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Helper/Error Text */
+.error-message {
+  margin-top: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  color: var(--color-error-600);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.helper-text {
+  margin-top: var(--spacing-1);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}

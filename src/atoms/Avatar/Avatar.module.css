@@ -1,0 +1,167 @@
+/* Avatar Component Styles */
+
+.avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  overflow: hidden;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* Sizes */
+.avatar--xs {
+  width: 24px;
+  height: 24px;
+  font-size: var(--font-size-xs);
+}
+
+.avatar--sm {
+  width: 32px;
+  height: 32px;
+  font-size: var(--font-size-sm);
+}
+
+.avatar--md {
+  width: 40px;
+  height: 40px;
+  font-size: var(--font-size-base);
+}
+
+.avatar--lg {
+  width: 48px;
+  height: 48px;
+  font-size: var(--font-size-lg);
+}
+
+.avatar--xl {
+  width: 64px;
+  height: 64px;
+  font-size: var(--font-size-xl);
+}
+
+/* Shapes */
+.avatar--circle {
+  border-radius: 9999px;
+}
+
+.avatar--square {
+  border-radius: var(--radius-lg);
+}
+
+/* Variants */
+.avatar--primary {
+  background-color: var(--color-primary-600);
+}
+
+.avatar--secondary {
+  background-color: var(--color-secondary-600);
+}
+
+.avatar--success {
+  background-color: var(--color-success-600);
+}
+
+.avatar--error {
+  background-color: var(--color-error-600);
+}
+
+.avatar--warning {
+  background-color: var(--color-warning-500);
+}
+
+.avatar--info {
+  background-color: var(--color-info-600);
+}
+
+.avatar--neutral {
+  background-color: var(--color-neutral-600);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.initials {
+  font-weight: var(--font-weight-semibold);
+}
+
+.fallback {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Status indicator */
+.status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  border-radius: 9999px;
+  border: 2px solid var(--color-white);
+}
+
+.status--xs {
+  width: 6px;
+  height: 6px;
+}
+
+.status--sm {
+  width: 8px;
+  height: 8px;
+}
+
+.status--md {
+  width: 10px;
+  height: 10px;
+}
+
+.status--lg {
+  width: 12px;
+  height: 12px;
+}
+
+.status--xl {
+  width: 16px;
+  height: 16px;
+}
+
+.status--online {
+  background-color: var(--color-success-500);
+}
+
+.status--offline {
+  background-color: var(--color-neutral-400);
+}
+
+.status--busy {
+  background-color: var(--color-error-500);
+}
+
+.status--away {
+  background-color: var(--color-warning-500);
+}
+
+/* Avatar Group */
+.avatarGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+.avatarGroupItem {
+  margin-left: -8px;
+  border: 2px solid var(--color-white);
+  border-radius: 9999px;
+}
+
+.avatarGroupItem:first-child {
+  margin-left: 0;
+}

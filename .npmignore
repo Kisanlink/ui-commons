@@ -1,0 +1,34 @@
+# Source files
+src/
+.storybook/
+
+# Config files
+.eslintrc.cjs
+.prettierrc
+.prettierignore
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+vitest.config.ts
+postcss.config.js
+
+# CI/CD
+.github/
+.husky/
+
+# Docs
+docs/
+.kiro/
+
+# Testing
+coverage/
+*.test.ts
+*.test.tsx
+*.stories.ts
+*.stories.tsx
+__tests__/
+
+# Misc
+.DS_Store
+*.log
+.env*

@@ -1,0 +1,122 @@
+/* EmptyState Container */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-12) var(--spacing-4);
+}
+
+/* Icon */
+.icon {
+  margin-bottom: var(--spacing-4);
+}
+
+.defaultIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-tertiary);
+}
+
+/* Title */
+.title {
+  margin: 0 0 var(--spacing-2) 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+}
+
+/* Description */
+.description {
+  margin: 0 0 var(--spacing-6) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  max-width: 28rem;
+}
+
+/* Action */
+.action {
+  margin-top: var(--spacing-2);
+}
+
+/* Size Variants */
+.size-sm {
+  padding: var(--spacing-8) var(--spacing-4);
+}
+
+.size-sm .defaultIconWrapper {
+  width: 48px;
+  height: 48px;
+}
+
+.size-sm .defaultIconWrapper svg {
+  width: 32px;
+  height: 32px;
+}
+
+.size-sm .title {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-1);
+}
+
+.size-sm .description {
+  font-size: var(--font-size-xs);
+  margin-bottom: var(--spacing-4);
+  max-width: 24rem;
+}
+
+.size-md {
+  padding: var(--spacing-12) var(--spacing-4);
+}
+
+.size-md .defaultIconWrapper {
+  width: 64px;
+  height: 64px;
+}
+
+.size-md .defaultIconWrapper svg {
+  width: 48px;
+  height: 48px;
+}
+
+.size-md .title {
+  font-size: var(--font-size-lg);
+}
+
+.size-md .description {
+  font-size: var(--font-size-sm);
+  max-width: 28rem;
+}
+
+.size-lg {
+  padding: var(--spacing-16) var(--spacing-4);
+}
+
+.size-lg .defaultIconWrapper {
+  width: 80px;
+  height: 80px;
+}
+
+.size-lg .defaultIconWrapper svg {
+  width: 64px;
+  height: 64px;
+}
+
+.size-lg .title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-3);
+}
+
+.size-lg .description {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-8);
+  max-width: 32rem;
+}

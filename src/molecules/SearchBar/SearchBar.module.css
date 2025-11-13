@@ -1,0 +1,139 @@
+.form {
+  width: 100%;
+}
+
+.searchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease-in-out;
+}
+
+.searchBar:focus-within {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.searchBar.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--color-bg-secondary);
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--spacing-3);
+  display: flex;
+  align-items: center;
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.input {
+  flex: 1;
+  padding: var(--spacing-2) var(--spacing-10) var(--spacing-2) var(--spacing-10);
+  border: none;
+  background: none;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}
+
+/* Remove default search input styling */
+.input[type='search']::-webkit-search-cancel-button,
+.input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.loader {
+  position: absolute;
+  right: var(--spacing-3);
+  display: flex;
+  align-items: center;
+}
+
+.clearButton {
+  position: absolute;
+  right: var(--spacing-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  border-radius: var(--radius-sm);
+}
+
+.clearButton:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+}
+
+.clearButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 1px;
+}
+
+.clearButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Size variants */
+.size-sm {
+  height: 32px;
+}
+
+.size-sm .input {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-1) var(--spacing-9) var(--spacing-1) var(--spacing-9);
+}
+
+.size-sm .searchIcon {
+  left: var(--spacing-2);
+}
+
+.size-sm .loader,
+.size-sm .clearButton {
+  right: var(--spacing-2);
+}
+
+.size-md {
+  height: 40px;
+}
+
+.size-lg {
+  height: 48px;
+}
+
+.size-lg .input {
+  font-size: var(--font-size-base);
+  padding: var(--spacing-3) var(--spacing-11) var(--spacing-3) var(--spacing-11);
+}
+
+.size-lg .searchIcon {
+  left: var(--spacing-4);
+}
+
+.size-lg .loader,
+.size-lg .clearButton {
+  right: var(--spacing-4);
+}

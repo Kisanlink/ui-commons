@@ -1,0 +1,127 @@
+.tabs {
+  width: 100%;
+}
+
+.tabsList {
+  display: flex;
+}
+
+/* Orientation variants */
+.orientation-horizontal {
+  flex-direction: row;
+}
+
+.orientation-vertical {
+  flex-direction: column;
+}
+
+/* List variants */
+.variant-underline {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.variant-pills {
+  gap: var(--spacing-2);
+  padding: var(--spacing-1);
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.variant-solid {
+  gap: var(--spacing-1);
+}
+
+/* Trigger base styles */
+.tabsTrigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: all 0.2s ease-in-out;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+}
+
+.tabsTrigger:focus {
+  outline: none;
+}
+
+.tabsTrigger:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+}
+
+.tabsTrigger.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Underline variant */
+.trigger-variant-underline {
+  border-bottom: 2px solid transparent;
+  padding: var(--spacing-2) var(--spacing-4);
+}
+
+.trigger-variant-underline:hover:not(.disabled) {
+  color: var(--color-primary-600);
+}
+
+.trigger-variant-underline.active {
+  border-bottom-color: var(--color-primary-600);
+  color: var(--color-primary-600);
+}
+
+/* Pills variant */
+.trigger-variant-pills {
+  padding: var(--spacing-1-5) var(--spacing-3);
+  border-radius: var(--radius-md);
+}
+
+.trigger-variant-pills:hover:not(.disabled) {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.trigger-variant-pills.active {
+  background-color: var(--color-bg-primary);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-text-primary);
+}
+
+/* Solid variant */
+.trigger-variant-solid {
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.trigger-variant-solid:hover:not(.disabled) {
+  background-color: var(--color-bg-secondary);
+}
+
+.trigger-variant-solid.active {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border-light);
+  border-bottom: none;
+  color: var(--color-text-primary);
+}
+
+/* Icon */
+.icon {
+  margin-right: var(--spacing-2);
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Content */
+.tabsContent {
+  margin-top: var(--spacing-4);
+  outline: none;
+}
+
+.tabsContent:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+  border-radius: var(--radius-md);
+}

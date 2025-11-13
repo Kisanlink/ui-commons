@@ -1,0 +1,151 @@
+/* Base text styles */
+.text {
+  margin: 0;
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-base);
+}
+
+/* Variant styles */
+.text--h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+}
+
+.text--h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+}
+
+.text--h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+}
+
+.text--h4 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+}
+
+.text--h5 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+}
+
+.text--h6 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+}
+
+.text--body1 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+}
+
+.text--body2 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+.text--caption {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+.text--label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+}
+
+.text--overline {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Color variants */
+.text--primary {
+  color: var(--color-neutral-900);
+}
+
+.text--secondary {
+  color: var(--color-neutral-600);
+}
+
+.text--success {
+  color: var(--color-success-600);
+}
+
+.text--error {
+  color: var(--color-error-600);
+}
+
+.text--warning {
+  color: var(--color-warning-600);
+}
+
+.text--info {
+  color: var(--color-info-600);
+}
+
+.text--inherit {
+  color: inherit;
+}
+
+/* Alignment */
+.text--align-left {
+  text-align: left;
+}
+
+.text--align-center {
+  text-align: center;
+}
+
+.text--align-right {
+  text-align: right;
+}
+
+.text--align-justify {
+  text-align: justify;
+}
+
+/* Weight */
+.text--weight-normal {
+  font-weight: var(--font-weight-normal);
+}
+
+.text--weight-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.text--weight-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.text--weight-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Text modifiers */
+.text--no-wrap {
+  white-space: nowrap;
+}
+
+.text--ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

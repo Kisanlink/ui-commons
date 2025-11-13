@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+}
+
+.navButton {
+  min-width: 32px;
+  font-size: var(--font-size-lg);
+}
+
+.pageNumbers {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.pageButton {
+  min-width: 32px;
+}
+
+.pageButton.active {
+  pointer-events: none;
+}
+
+.ellipsis {
+  padding: var(--spacing-1-5) var(--spacing-3);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  user-select: none;
+}

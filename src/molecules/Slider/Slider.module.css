@@ -1,0 +1,92 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  padding: var(--spacing-2) 0;
+}
+
+.slider:focus {
+  outline: none;
+}
+
+.slider:focus-visible .thumb {
+  box-shadow: 0 0 0 4px var(--color-primary-100);
+}
+
+.slider.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.track {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background-color: var(--color-primary-500);
+  transition: width 0.1s ease-out;
+}
+
+.thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-bg-primary);
+  border: 2px solid var(--color-primary-500);
+  border-radius: 50%;
+  transition: transform 0.1s ease-out, box-shadow 0.2s ease;
+  cursor: grab;
+}
+
+.thumb:active {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.value {
+  min-width: 40px;
+  text-align: right;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+/* Size variants */
+.size-sm .track {
+  height: 4px;
+}
+
+.size-sm .thumb {
+  width: 12px;
+  height: 12px;
+}
+
+.size-md .track {
+  height: 6px;
+}
+
+.size-md .thumb {
+  width: 16px;
+  height: 16px;
+}
+
+.size-lg .track {
+  height: 8px;
+}
+
+.size-lg .thumb {
+  width: 20px;
+  height: 20px;
+}

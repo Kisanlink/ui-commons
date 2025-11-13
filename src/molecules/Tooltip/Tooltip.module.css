@@ -1,0 +1,121 @@
+.tooltip {
+  position: absolute;
+  z-index: 9999;
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-primary);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+  max-width: 300px;
+  word-wrap: break-word;
+  box-shadow: var(--shadow-lg);
+  animation: tooltipFadeIn 0.15s ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Arrow base styles */
+.arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-text-primary);
+  transform: rotate(45deg);
+}
+
+/* Arrow positioning for each placement */
+.arrow-top {
+  bottom: -4px;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.arrow-bottom {
+  top: -4px;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.arrow-left {
+  right: -4px;
+  top: 50%;
+  margin-top: -4px;
+}
+
+.arrow-right {
+  left: -4px;
+  top: 50%;
+  margin-top: -4px;
+}
+
+/* Placement-specific animations */
+.placement-top {
+  animation: tooltipSlideTop 0.15s ease-in-out;
+}
+
+.placement-bottom {
+  animation: tooltipSlideBottom 0.15s ease-in-out;
+}
+
+.placement-left {
+  animation: tooltipSlideLeft 0.15s ease-in-out;
+}
+
+.placement-right {
+  animation: tooltipSlideRight 0.15s ease-in-out;
+}
+
+@keyframes tooltipSlideTop {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tooltipSlideBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tooltipSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes tooltipSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
